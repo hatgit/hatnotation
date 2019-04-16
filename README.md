@@ -177,9 +177,9 @@ Python 3 or higher
 
 ## Tests: 
 
-> Example Test string encoding:
+> Example Test strings: 
 
-- Decode Target: `hello world
+- Decode Target: `helloworld
 
 - Each letter decodes to respective 6-bit group: `"010001","001110","010101","010101","011000"," ", "100000","011000","011011","010101","001101",
 
@@ -187,9 +187,12 @@ Python 3 or higher
 
 - Concatenation of both words into one string: `"010001001110010101010101011000100000011000011011010101001101"
 
-- Converted binary string to hex: `0x44e55562061b54d`
+- Converted binary string to hex (can be used as starting point to encode to "helloworld": `0x44e55562061b54d`
 
 ## Reources: 
+
+-Other base64 encoding schemes: https://en.wikipedia.org/wiki/Base64
+-Notational conventions: https://tools.ietf.org/html/rfc2822
 
 ## Roadmap/Plans:
 
