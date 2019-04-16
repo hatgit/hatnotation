@@ -37,12 +37,12 @@ In terms of actual pre-image resistance, the initial entropy should be generated
 
 ### Example of various notation methods for a given binary (base 2) string: 
 
-<li><ul>Binary (base-2) format: `00001001100111001011111110101111000100110000001100100111011101101011100000111110011000110100110000101100001011101010000000010111`</ul>
-<ul>Hexidecimal(base-16) format: `99cbfaf13032776b83e634c2c2ea017`</ul>
-<ul>Decimal (base-10) integer format: `12776938083042441757844264502598475799`</ul>
-<ul>Mnemonic format (BIP39): `another tourist type champion crash robust thought small equip gesture pool cool`  (note: this mnemonic conveys 132 bits as the extra 4-bit checksum is deterministic based on the initial 128 bits).</ul>
+<li><ul>Binary (base-2) format: `00001001100111001011111110101111000100110000001100100111011101101011100000111110011000110100110000101100001011101010000000010111`</ul></li>
+<li><ul>Hexidecimal(base-16) format: `99cbfaf13032776b83e634c2c2ea017`</ul></li>
+<li><ul>Decimal (base-10) integer format: `12776938083042441757844264502598475799`</ul></li>
+<li><ul>Mnemonic format (BIP39): `another tourist type champion crash robust thought small equip gesture pool cool`  (note: this mnemonic conveys 132 bits as the extra 4-bit checksum is deterministic based on the initial 128 bits).</ul></li>
 
-<ul>Hatnotation format: `9$B_,4-C$T(W_O;-)B'0N`</ul>
+<li><ul>Hatnotation format: `9$B_,4-C$T(W_O;-)B'0N`</ul>
 </li>
 
 ## Important
