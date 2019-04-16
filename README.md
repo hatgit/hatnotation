@@ -176,6 +176,9 @@ Python 3 or higher
 
 ## Reources: 
 
+Other base64 encoding schemes: https://en.wikipedia.org/wiki/Base64
+Notational conventions: https://tools.ietf.org/html/rfc2822
+
 ## Roadmap/Plans:
 
 
