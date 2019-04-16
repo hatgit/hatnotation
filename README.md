@@ -44,7 +44,8 @@ In terms of actual pre-image resistance, the initial entropy should be generated
 > `99cbfaf13032776b83e634c2c2ea017`
 - Decimal (base-10) integer format: 
 >`12776938083042441757844264502598475799`
-<li><ul>Mnemonic format (BIP39): `another tourist type champion crash robust thought small equip gesture pool cool`  (note: this mnemonic conveys 132 bits as the extra 4-bit checksum is deterministic based on the initial 128 bits).</ul></li>
+- Mnemonic format (BIP39): 
+>`another tourist type champion crash robust thought small equip gesture pool cool`  (note: this mnemonic conveys 132 bits as the extra 4-bit checksum is deterministic based on the initial 128 bits).</ul></li>
 
 - >Hatnotation format:
  > `9$B_,4-C$T(W_O;-)B'0N`
