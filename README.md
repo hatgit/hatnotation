@@ -197,6 +197,7 @@ Second Test: Decoder should be able to take a single backslash `\` and return in
 
 - Other base64 encoding schemes: https://en.wikipedia.org/wiki/Base64
 - Notational conventions: https://tools.ietf.org/html/rfc2822
+- Human-readable keys (1994) https://tools.ietf.org/html/rfc1751
 
 ## Roadmap/Plans:
 
