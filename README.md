@@ -31,7 +31,7 @@ Note: While the word private key is usually associated with public/private key-p
 |Total Words     |`132/11 = 12 words`            |`264/11 = 24 words`          |
 |----------------|-------------------------------|-----------------------------|
 
-In terms of actual pre-image resistance, the initial entropy should be generated in a cryptographically-secure manner that is pre-image resistant and resistant to other attacks), and the psuedo-random binary string that results will be that is machine-readable where the purpose of encoding it into a mnemonic is to make it easier to notate, recite, read, and write, compared to binary (machine-readable)format.
+In terms of actual pre-image resistance, the initial entropy should be generated in a cryptographically-secure manner that is pre-image resistant and resistant to other attacks, such as outlined in the W3C Cryptography API or via the "secrets" module in Python), and the psuedo-random binary string that results will be that is machine-readable where the purpose of encoding it into a mnemonic is to make it easier to notate, recite, read, and write, compared to binary (machine-readable).
 
 
 
@@ -149,6 +149,8 @@ Index | 6-bit number, | character/value,
 63 | "111111", | "`",
 
 ## Requirements
+
+Python 3 or higher
 
 
 ## Installation: 
