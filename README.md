@@ -154,6 +154,17 @@ Using the binascii libary in python which contains the string library, we source
 62 | "111110", | "_",
 63 | "111111", | "`",
 
+## Library verification
+
+In Python version 3.7 using the strings library, the following steps can be taken to verify the library and character order and by omitting the last 4 characters "{|}~" in the fourth step below (zeroed-index values 64-67 which have been omitted from the above list as well): 
+
+- ```>>> import string```
+- ```>>> dir(string)['Formatter', 'Template', '_ChainMap', '_TemplateMetaclass', '__all__', '__builtins__', '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__spec__', '_re', '_string', 'ascii_letters', 'ascii_lowercase', 'ascii_uppercase', 'capwords', 'digits', 'hexdigits', 'octdigits', 'printable', 'punctuation', 'whitespace']```
+- ```>>> print(string.digits+string.ascii_uppercase+string.punctuation)```
+- ```0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~```
+
+(i.e. ~~```"{|}~"```~~)
+
 ## Requirements
 
 Python 3 or higher
