@@ -58,18 +58,18 @@ Just as a mnemonic that represents a 132 bits of some initial entropy should con
 ### Lemma 
 For any arbitrary binary (base-2) string x of length n, after hatnotation is applied to x, the length n = ((x - (x % 6))/6)+(x %6, optionally in some cases depending on how the encoder/decoder is constructed). Optimal compression will occur when the  
 
-`(128-(128 % 6)) / 6 == 21 == 2^128
-`(132-(132 % 6)) / 6 == 22 == 2^132
-`(256-(256 % 6)) / 6 == 42 == 2^256
-`(264-(264 % 6)) / 6 == 44 == 2^264
+`(128-(128 % 6)) / 6 == 21 == 2^128`
+`(132-(132 % 6)) / 6 == 22 == 2^132`
+`(256-(256 % 6)) / 6 == 42 == 2^256`
+`(264-(264 % 6)) / 6 == 44 == 2^264`
 
 
-|                |12-word mnemonic               |24-word mnemonic             |
+|  Private Key          |12-word mnemonic               |24-word mnemonic     |
 |----------------|-------------------------------|-----------------------------|
-| 128 bits       |`21 characters`                |`Checksum must be computed'  |
-| 132 bits       |`22 characters`                |`Checksum included           |
-| 256 bits       |`42 characters`                |`Checksum must be computed`  |
-| 264 bits       |`44 characters`               |`Checksum included`          |
+| 128 bits       |21 characters                |Checksum must be computed  |
+| 132 bits       |22 characters             |Checksum included     |
+| 256 bits       |42 characters                |Checksum must be computed  |
+| 264 bits       |44 characters                 |Checksum included        |
 |----------------|-------------------------------|-----------------------------|
 
 
@@ -81,7 +81,7 @@ Using the binascii libary in python which contains the string library, we source
 26 Uppercase letter values (letters A-Z)
 28 Special character values (!-`)
 
-Index | 6-bit number, | character/value,
+`Index | 6-bit number, | character/value,`
 -- | -- | --
 0 | "000000", | "0",
 1 | "000001", | "1",
