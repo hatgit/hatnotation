@@ -1,10 +1,14 @@
 # Hatnotation
-Hatnotation is short for the Hatzakis Base 64 notation system which is a method to encode/decode arbitrary binary strings of data, invented by Steven Hatzakis and open-sourced here under Apache License 2.0 https://github.com/hatgit/hatnotation/blob/master/LICENSE.
+Hatnotation is short for the *Hatzakis Base 64 notation system* which is a method to encode/decode arbitrary binary strings of data, invented by Steven Hatzakis and open-sourced here under Apache License 2.0 https://github.com/hatgit/hatnotation/blob/master/LICENSE.
 
  <blockquote>
 <pre><code>[Use of Hatnotation is subject to Apache License 2.0 ] <a href="https://github.com/hatgit/hatnotation/blob/master/LICENSE">https://github.com/hatgit/hatnotation/blob/master/LICENSE</a>
 </code></pre>
 </blockquote>
+
+## Purpose
+An encoding/decoding method that allows users to compress their human-readable data into fewer humand-readable characters than other popular notation systems, for any arbitrary underlying machine-readable binary string. 
+
 
 ## Warning: 
 
@@ -12,12 +16,16 @@ This software is still in its experimental phase and should not be relied upon f
 
 ## Background on Mnemonics (private keys) and Human vs Machine-readable code
 
-Mnemonics (aka recovery phrases) are used in many popular crypto wallet applciations including BIP39 (which follows a specific wordlist and checksum requirement, among other steps for wallet derivation such as BIP32, BIP44) enable a user to backup their initial entropy in human-readable format. For example, instead of a user having to backup a string of 128 bits or their private key, they can simply store the encoded mnemonic which represents those bits or a private key. Note: While the word private key is usually associated with public/private key-pairs in cryptogrpahy, for the purpose of this Readme.md file, the use of private key refers to the master private key (initial entropy) for a crypto vault (within which accounts and private keys are dervived) which can also be considered a pre-image of the mnemonic.
+Mnemonics (aka recovery phrases) are used in many popular crypto wallet applciations including BIP39 (which follows a specific wordlist and checksum requirement, among other steps for wallet derivation such as BIP32, BIP44) enable a user to backup their initial entropy in human-readable format. 
+
+For example, instead of a user having to backup a string of 128 bits or their private key, they can simply store the encoded mnemonic which represents those bits or a private key. 
+
+Note: While the word private key is usually associated with public/private key-pairs in cryptogrpahy, for the purpose of this Readme.md file, the use of private key refers to the master private key (initial entropy) for a crypto vault (within which accounts and private keys are dervived) which can also be considered a pre-image of the mnemonic.
 
 
 |                |12-word mnemonic               |24-word mnemonic             |
 |----------------|-------------------------------|-----------------------------|
-|Initial Entropy (security) |`128 bits`                     |`256 bits`                   |
+|Initial Entropy (security) |`128 bits`          |`256 bits`                   |
 |Checksum        |`4 bits`                       |`8 bits`                     |
 |Total Bits      |`132 bits`                     |`264 bits`                   |
 |Total Words     |`132/11 = 12 words`            |`264/11 = 24 words`          |
@@ -139,4 +147,16 @@ Index | 6-bit number, | character/value,
 61 | "111101", | "^",
 62 | "111110", | "_",
 63 | "111111", | "`",
+
+## Requirements
+
+
+## Installation: 
+
+## Tests: 
+
+## Reources: 
+
+## Roadmap/Plans:
+
 
