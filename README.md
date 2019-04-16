@@ -189,7 +189,7 @@ Python 3 or higher
 
 - Converted binary string to hex (can be used as starting point to encode to "helloworld": `0x44e55562061b54d`
 
-## Reources: 
+## Resources: 
 
 - Other base64 encoding schemes: https://en.wikipedia.org/wiki/Base64
 - Notational conventions: https://tools.ietf.org/html/rfc2822
