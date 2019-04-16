@@ -1,6 +1,6 @@
 # Hatnotation
 
-> Hatnotation is short for the *Hatzakis Base 64 notation system* which is a method to encode/decode arbitrary binary strings of data, invented by Steven Hatzakis and open-sourced here under Apache License 2.0 https://github.com/hatgit/hatnotation/blob/master/LICENSE.
+> Hatnotation is short for the *Hatzakis Base 64 notation system* which is a method to encode/decode arbitrary binary strings of data, invented by Steven Hatzakis and open-sourced here under [Apache License 2.0] (https://github.com/hatgit/hatnotation/blob/master/LICENSE).
 
  <blockquote>
 <pre><code>[Use of Hatnotation is subject to Apache License 2.0 ] <a href="https://github.com/hatgit/hatnotation/blob/master/LICENSE">https://github.com/hatgit/hatnotation/blob/master/LICENSE</a>
@@ -17,7 +17,7 @@ This software is still in its experimental phase and should not be relied upon f
 
 ## Background on Mnemonics (private keys) and Human vs Machine-readable code
 
-Mnemonics (aka recovery phrases) are used in many popular crypto wallet applciations including BIP39 (which follows a specific wordlist and checksum requirement, among other steps for wallet derivation such as BIP32, BIP44) enable a user to backup their initial entropy in human-readable format. 
+Mnemonics (aka recovery phrases) are used in many popular crypto wallet applciations including [BIP39] (https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki) (which follows a specific wordlist and checksum requirement, among other steps for wallet derivation such as BIP32, BIP44) enable a user to backup their initial entropy in human-readable format. 
 
 For example, instead of a user having to backup a string of 128 bits or their private key, they can simply store the encoded mnemonic which represents those bits or a private key. 
 
