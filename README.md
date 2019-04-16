@@ -1,9 +1,9 @@
 # Hatnotation
 
-> Hatnotation is short for the *Hatzakis Base 64 notation system* which is a method to encode/decode arbitrary binary strings of data, invented by Steven Hatzakis and open-sourced here under Apache License 2.0 https://github.com/hatgit/hatnotation/blob/master/LICENSE.
+> Hatnotation is short for the *Hatzakis Base 64 notation system* which is a method to encode/decode arbitrary binary strings of data, invented by Steven Hatzakis and open-sourced here under [Apache License 2.0](https://github.com/hatgit/hatnotation/blob/master/LICENSE).
 
  <blockquote>
-<pre><code>[Use of Hatnotation is subject to Apache License 2.0 ] <a href="https://github.com/hatgit/hatnotation/blob/master/LICENSE">https://github.com/hatgit/hatnotation/blob/master/LICENSE</a>
+<pre><code>[Use of Hatnotation is subject to Apache License 2.0] <a href="https://github.com/hatgit/hatnotation/blob/master/LICENSE">https://github.com/hatgit/hatnotation/blob/master/LICENSE</a>
 </code></pre>
 </blockquote>
 
@@ -17,7 +17,7 @@ This software is still in its experimental phase and should not be relied upon f
 
 ## Background on Mnemonics (private keys) and Human vs Machine-readable code
 
-Mnemonics (aka recovery phrases) are used in many popular crypto wallet applciations including BIP39 (which follows a specific wordlist and checksum requirement, among other steps for wallet derivation such as BIP32, BIP44) enable a user to backup their initial entropy in human-readable format. 
+Mnemonics (aka recovery phrases) are used in many popular crypto wallet applciations including [BIP39 (https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki) (which follows a specific wordlist and checksum requirement, among other steps for wallet derivation such as BIP32, BIP44) enable a user to backup their initial entropy in human-readable format. 
 
 For example, instead of a user having to backup a string of 128 bits or their private key, they can simply store the encoded mnemonic which represents those bits or a private key. 
 
@@ -32,7 +32,7 @@ For example, instead of a user having to backup a string of 128 bits or their pr
 |Total Words     |`132/11 = 12 words`            |`264/11 = 24 words`          |
 |----------------|-------------------------------|-----------------------------|
 
-In terms of actual pre-image resistance, the initial entropy should be generated in a cryptographically-secure manner that is pre-image resistant and resistant to other attacks, such as outlined in the W3C Cryptography API or via the "secrets" module in Python), and the psuedo-random binary string that results will be that is machine-readable where the purpose of encoding it into a mnemonic is to make it easier to notate, recite, read, and write, compared to binary (machine-readable).
+In terms of actual pre-image resistance, the initial entropy should be generated in a cryptographically-secure manner that is pre-image resistant and resistant to other attacks, such as outlined in the [W3C Cryptography API](https://www.w3.org/TR/WebCryptoAPI/) or via the [secrets](https://docs.python.org/3/library/secrets.html) module in Python), and the psuedo-random binary string that results will be machine-readable where the purpose of encoding it into a mnemonic is to make it easier to notate, recite, read, and write, (i.e. human-readable) compared to binary (machine-readable).
 
 
 
@@ -62,15 +62,18 @@ The Hatnotation system is *not intended to be an alternative to human-readable m
 Just as a mnemonic that represents a 132 bits of some initial entropy should convey 128 bits of security if generated properly, as the last 4 bits are deterministically derived from the hash-based checksum computation (hashing the initial entropy as a byte array). Those same 132 bits can be encoded using the Hatnotation system which will result in 22 characters, sourced from the 64 character library. Mathematically, 64^22 == 2^132, hence why there is no information/security loss, for example. 
 
 ### Lemma 
-For any arbitrary binary (base-2) string x of length n, after hatnotation is applied to x, the length n = ((x - (x % 6))/6)+(x %6, optionally in some cases depending on how the encoder/decoder is constructed). Optimal compression will occur when the [COMPLETE THIS SECTION]  
+For any arbitrary binary (base-2) string x of length n, after hatnotation is applied to x, the length n = ((x - (x % 6))/6)+(x %6, optionally in some cases depending on how the encoder/decoder is constructed). 
 
-- `(128-(128 % 6)) / 6 == 21 == 2^128`
-- `(132-(132 % 6)) / 6 == 22 == 2^132`
-- `(256-(256 % 6)) / 6 == 42 == 2^256`
-- `(264-(264 % 6)) / 6 == 44 == 2^264`
+Optimal compression will occur when the x modulo 6 is equal to zero, and least optimum when x modulo 6 is equal to 5 (The assumption in this last sentence should be checked). 
+
+Below are two examples of when notation is optimum, using 132 bits and 264 bits as an example, and which are standard bit-lengths for the underlying entropy that represents 12-word or 24-word mnemonics used with crypto wallets. 
+
+- `(64^((132-(132 % 6)) / 6) == 2^132`
+
+- `(64^((264-(264 % 6)) / 6) == 2^264`
 
 
-|  Private Key          |12-word mnemonic               |24-word mnemonic     |
+|  Private Key          |Length after Hatnotation     | BIP39 checksum    |
 |----------------|-------------------------------|-----------------------------|
 | 128 bits       |21 characters                |Checksum must be computed  |
 | 132 bits       |22 characters             |Checksum included     |
