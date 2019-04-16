@@ -174,6 +174,18 @@ Python 3 or higher
 
 ## Tests: 
 
+> Example Test string encoding:
+
+- Decode Target: `hello world
+
+- Each letter decodes to respective 6-bit group: `"010001","001110","010101","010101","011000"," ", "100000","011000","011011","010101","001101",
+
+- Each Word as Continous string `"010001001110010101010101011000" "100000011000011011010101001101"
+
+- Concatenation of both words into one string: `"010001001110010101010101011000100000011000011011010101001101"
+
+- Converted binary string to hex: `0x44e55562061b54d`
+
 ## Reources: 
 
 ## Roadmap/Plans:
