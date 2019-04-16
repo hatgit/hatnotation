@@ -8,7 +8,7 @@
 </blockquote>
 
 ## Purpose
-An encoding/decoding method that allows users to compress their human-readable data into fewer humand-readable characters than other popular notation systems, for any arbitrary underlying machine-readable binary string. 
+An encoding/decoding method that allows users to compress their human-readable data into fewer human-readable characters than other popular notation systems, for any arbitrary underlying machine-readable binary string. 
 
 
 ## Warning: 
