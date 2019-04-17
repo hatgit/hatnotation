@@ -13,7 +13,7 @@ An encoding/decoding method that allows users to compress their human-readable d
 
 ## Warning: 
 
-This software is still in its experimental phase and should not be relied upon for production. 
+This software is still in its experimental phase and should not be relied upon for production.  
 
 ## Background on Mnemonics (private keys) and Human vs Machine-readable code
 
