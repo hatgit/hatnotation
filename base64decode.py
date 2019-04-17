@@ -102,6 +102,11 @@ def decodeAsHex(string):
 
     return hex(int(decodeAsBin(string), 2))
 
+print(decodeAsBin("INVENTEDBYSTEVENHATZAKIS@2018"))
+
+## test string should 29 hex: 0x125df39774e34b89c74e7ce5d129d8ca512739080048 equivalent in binary to this output: 010010010111011111001110010111011101001110001101001011100010011100011101001110011111001110010111010001001010011101100011001010010100010010011100111001000010000000000001001000
+
+
 ## Note/CONSIDERATION: Last four punctuation characters "{|}`" have been omitted from the above list, and even though they exists in the encoder python app it never appears in results (perhaps should be added here so a warning/error would trigger if those values ever appear in results or when entered into a decoder.
 
 
