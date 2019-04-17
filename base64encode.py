@@ -17,7 +17,71 @@ import binascii # required
 # first char 2 are discarded, and last char is N  0xb13ae7e331ce9dfa59799e95ee8dc117
 
 def base64en(address_hex):   # important never to rename base64en to "base64" which can corrupt the Python installation.
-    alphabet = string.digits+string.ascii_uppercase+string.punctuation
+    # (renamed alphabet to base64library below) alphabet = string.digits+string.ascii_uppercase+string.punctuation
+    base64library=["0",
+"1",
+"2",
+"3",
+"4",
+"5",
+"6",
+"7",
+"8",
+"9",
+"A",
+"B",
+"C",
+"D",
+"E",
+"F",
+"G",
+"H",
+"I",
+"J",
+"K",
+"L",
+"M",
+"N",
+"O",
+"P",
+"Q",
+"R",
+"S",
+"T",
+"U",
+"V",
+"W",
+"X",
+"Y",
+"Z",
+"!",
+'"',
+"#",
+"$",
+"%",
+"&",
+"'",
+"(",
+")",
+"*",
+"+",
+",",
+"-",
+".",
+"/",
+":",
+";",
+"<",
+"=",
+">",
+"?",
+"@",
+"[",
+"\\",
+"]",
+"^",
+"_",
+"`"]
     b64_string = ''
     # Get the number of leading zeros and convert hex to decimal
     leading_zeros = len(str(address_hex))-2 #len(str(address_hex)) - len(str(address_hex.lstrip('0')))
@@ -26,7 +90,7 @@ def base64en(address_hex):   # important never to rename base64en to "base64" wh
     # Append digits to the start of string
     while address_int > 0:
         digit = address_int % 64
-        digit_char = alphabet[digit]
+        digit_char = base64library[digit]
         b64_string = digit_char + b64_string
         address_int //= 64
     # Add '1' for each 2 leading zeros
