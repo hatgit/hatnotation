@@ -14,22 +14,9 @@ import secrets
 # Converted binary string to hex: `0x44e55562061b54d`
 
 
-arbitrarystring=format(secrets.randbits(139),'139b')
-#arbitrarystring=str(arbitrarystring)
-print("0b"+arbitrarystring)
-print("As hex:",hex(int(arbitrarystring, 2)))
-arbitrarystring=arbitrarystring[:132]
 
 
-print("first 132 bits:",arbitrarystring)
-s=str(arbitrarystring)
-groups= [s[i:i+6] for i in range(0,len(s),6)]
-
-print(groups)
-padgroup=[s[i:i+6] for i in range(0,len(s),6)]
-
-#print(padgroup)
-
+b64dict=dict()
 
 base64library=["0",
 "1",
@@ -44,7 +31,7 @@ base64library=["0",
 "A",
 "B",
 "C",
-"D ",
+"D",
 "E",
 "F",
 "G",
@@ -95,65 +82,27 @@ base64library=["0",
 "^",
 "_",
 "`"]
+for i in range(len(base64library)):
+    b64dict[base64library[i]] = i
+
+
+def decodeAsBin(string):
+    output = []
+    s=''
+    print(len(string))
+    for j in range(len(string)):
+
+        if (string[j] != ' '):
+            output.append(bin(b64dict[string[j].upper()])[2:].zfill(6))
+
+    return s.join(output)
+
+
+def decodeAsHex(string):
+
+    return hex(int(decodeAsBin(string), 2))
 
 ## Note/CONSIDERATION: Last four punctuation characters "{|}`" have been omitted from the above list, and even though they exists in the encoder python app it never appears in results (perhaps should be added here so a warning/error would trigger if those values ever appear in results or when entered into a decoder.
 
-#OLD jolly=[padgroup[i:i+6] for i in range(0,len(base64library[0]),6)]
-index=[padgroup[i:i+22] for i in range(0,len(str(padgroup[0])),6)]
-print('Index:', index)
 
-First=int((padgroup[0]),2)
 
-#First=bin(First)
-
-print(base64library[First])
-
-Second=int(padgroup[1],2)
-
-print(base64library[Second])
-Third=int(padgroup[2],2)
-print(base64library[Third])
-Fourth=int(padgroup[3],2)
-print(base64library[Fourth])
-Fifth=int(padgroup[4],2)
-print(base64library[Fifth])
-Sixth=int(padgroup[5],2)
-print(base64library[Sixth])
-Seventh=int(padgroup[6],2)
-print(base64library[Seventh])
-Eigth=int(padgroup[7],2)
-print(base64library[Eigth])
-Ninth=int(padgroup[8],2)
-print(base64library[Ninth])
-Tenth=int(padgroup[9],2)
-print(base64library[Tenth])
-Eleventh=int(padgroup[10],2)
-print(base64library[Eleventh])    
-Twelfth=int(padgroup[11],2)
-print(base64library[Twelfth])
-Thirteenth=int(padgroup[12],2)
-print(base64library[Thirteenth])
-Fourteenth=int(padgroup[13],2)
-print(base64library[Fourteenth])
-Fifteenth=int(padgroup[14],2)
-print(base64library[Fifteenth])
-Sixteenth=int(padgroup[15],2)
-print(base64library[Sixteenth])
-Seventeenth=int(padgroup[16],2)
-print(base64library[Seventeenth])
-Eighteenth=int(padgroup[17],2)
-print(base64library[Eighteenth])
-Nineteenth=int(padgroup[18],2)
-print(base64library[Nineteenth])
-Twentieth=int(padgroup[19],2)
-print(base64library[Twentieth])
-TwentyFirst=int(padgroup[20],2)
-print(base64library[TwentyFirst])
-TwentySecond=int(padgroup[21],2)
-print(base64library[TwentySecond])
-
-##
- 
-print(base64library[First],base64library[Second],base64library[Third],base64library[Fourth],base64library[Fifth],base64library[Sixth],base64library[Seventh],base64library[Eigth],base64library[Ninth],base64library[Tenth],base64library[Eleventh],base64library[Twelfth],base64library[Thirteenth],base64library[Fourteenth],base64library[Fifteenth],base64library[Sixteenth],base64library[Seventeenth],base64library[Eighteenth],base64library[Nineteenth],base64library[Twentieth],base64library[TwentyFirst],base64library[TwentySecond])
-print(base64library[First]+base64library[Second]+base64library[Third]+base64library[Fourth]+base64library[Fifth]+base64library[Sixth]+base64library[Seventh]+base64library[Eigth]+base64library[Ninth]+base64library[Tenth]+base64library[Eleventh]+base64library[Twelfth]+base64library[Thirteenth]+base64library[Fourteenth]+base64library[Fifteenth]+base64library[Sixteenth]+base64library[Seventeenth]+base64library[Eighteenth]+base64library[Nineteenth]+base64library[Twentieth]+base64library[TwentyFirst]+base64library[TwentySecond])
-print("Length of initial ent as hex:",len(hex(int("0b"+arbitrarystring, 2))))
