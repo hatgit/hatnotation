@@ -142,7 +142,7 @@ Using the binascii libary in python which contains the string library, we source
 47 | "101111", | ",",
 48 | "110000", | "-",
 49 | "110001", | ".",
-50 | "110010", | "/",
+50 | "110010", | "{",
 51 | "110011", | ":",
 52 | "110100", | ";",
 53 | "110101", | "<",
@@ -151,7 +151,7 @@ Using the binascii libary in python which contains the string library, we source
 56 | "111000", | "?",
 57 | "111001", | "@",
 58 | "111010", | "[",
-59 | "111011", | "\\",
+59 | "111011", | "}",
 60 | "111100", | "]",
 61 | "111101", | "^",
 62 | "111110", | "_",
@@ -159,14 +159,17 @@ Using the binascii libary in python which contains the string library, we source
 
 ## Library verification
 
-In Python version 3.7 using the strings library, the following steps can be taken to verify the library and character order and by omitting the last 4 characters "{|}~" in the fourth step below (zeroed-index values 64-67 which have been omitted from the above list as well): 
+In Python version 3.7 using the strings library, the following steps can be taken to verify the library and character order and notice that the following 4 characters are omitted "\\~/|" in the fourth step below: 
 
 - ```>>> import string```
 - ```>>> dir(string)['Formatter', 'Template', '_ChainMap', '_TemplateMetaclass', '__all__', '__builtins__', '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__spec__', '_re', '_string', 'ascii_letters', 'ascii_lowercase', 'ascii_uppercase', 'capwords', 'digits', 'hexdigits', 'octdigits', 'printable', 'punctuation', 'whitespace']```
 - ```>>> print(string.digits+string.ascii_uppercase+string.punctuation)```
 - ```0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~```
 
-(i.e. ~~```"{|}~"```~~)
+- Note, the backslash `\` and forwadslash `/`characters were swapped with opening `{` and closing `}` curly brackets in the following issue: https://github.com/hatgit/hatnotation/issues/3. 
+- The list of valid Hatnotation library characters are thus as follows: ```0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&'()*+,-.{:;<=>?@[}]^_````
+
+(and the following four remain excluded/reserved ~~```"\/|~"```~~).
 
 ## Requirements
 
@@ -179,7 +182,7 @@ Python 3 or higher
 
 > Example Test strings: 
 
-- Decode Target: `helloworld
+- Decode Target: `HELLOWORLD
 
 - Each letter decodes to respective 6-bit group: `"010001","001110","010101","010101","011000"," ", "100000","011000","011011","010101","001101",
 
@@ -203,4 +206,5 @@ Second Test: Decoder should be able to take a single backslash `\` and return in
 
 - develop a range of potential use cases 
 - potentially propose a request for comments (RFC) for consideration as a standard.
+- add error message for invalid characters (i.e. lowercase and reserved characters `\|/~`
 
