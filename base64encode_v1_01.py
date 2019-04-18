@@ -4,6 +4,7 @@ import string # required
 import binascii # required
 
 #Author: Steven Hatzakis @2018, Licensed under Apache 2.0
+# Version 1.01
 
 #test binary data string: 0b010010010111011111001110010111011101001110001101001011100010011100011101001110011111001110010111010001001010011101100011001010010100010010011100111001000010000000000001001000
 
@@ -68,7 +69,7 @@ def base64en(address_hex):   # important never to rename base64en to "base64" wh
 ",",
 "-",
 ".",
-"/",
+"{",
 ":",
 ";",
 "<",
@@ -77,7 +78,7 @@ def base64en(address_hex):   # important never to rename base64en to "base64" wh
 "?",
 "@",
 "[",
-"\\",
+"}",
 "]",
 "^",
 "_",
@@ -101,4 +102,3 @@ def base64en(address_hex):   # important never to rename base64en to "base64" wh
 hexer=int(input('enter hex with pad'),16)
 print(base64en(hexer))
 print("The above is this many char's long: ",len(str((base64en(hexer)))))
-
