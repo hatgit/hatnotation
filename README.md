@@ -166,7 +166,7 @@ In Python version 3.7 using the strings library, the following steps can be take
 - ```>>> print(string.digits+string.ascii_uppercase+string.punctuation)```
 - ```0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~```
 
-- Note, the backslash `\` and forwadslash `/`characters were swapped with opening `{` and closing `}` curly brackets in the following issue: https://github.com/hatgit/hatnotation/issues/3. 
+- Note, the backslash `\` and forwardslash `/`characters were swapped with opening `{` and closing `}` curly brackets in the following issue: https://github.com/hatgit/hatnotation/issues/3. 
 - The list of valid Hatnotation library characters are thus as follows: ```0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&'()*+,-.{:;<=>?@[}]^_````
 
 (and the following four remain excluded/reserved ~~```"\/|~"```~~).
