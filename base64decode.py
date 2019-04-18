@@ -5,15 +5,14 @@ import secrets
 
 #Author: Steven Hatzakis @2018, Licensed under Apache 2.0
 
-# NOTE: The initial version of this application is not yet functional and requires a code fix/rewrite in order to properly decode using the sample test string below.
+#Version 1.01
 
-# Example Test string target to decode: hello world
+
+# Example Test string target to decode: HELLOWORLD
 # Each letter decodes to respective 6-bit group: `"010001","001110","010101","010101","011000"," ", "100000","011000","011011","010101","001101",
 # Each Word as Continous string `"010001001110010101010101011000" "100000011000011011010101001101"
 # Concatenation of both words into one string: `"010001001110010101010101011000100000011000011011010101001101"
 # Converted binary string to hex: `0x44e55562061b54d`
-
-
 
 
 b64dict=dict()
@@ -68,7 +67,7 @@ base64library=["0",
 ",",
 "-",
 ".",
-"/",
+"}",
 ":",
 ";",
 "<",
@@ -77,7 +76,7 @@ base64library=["0",
 "?",
 "@",
 "[",
-"\\",
+"{",
 "]",
 "^",
 "_",
@@ -102,12 +101,14 @@ def decodeAsHex(string):
 
     return hex(int(decodeAsBin(string), 2))
 
-print(decodeAsBin("INVENTEDBYSTEVENHATZAKIS@2018"))
+hatdata2decode=input('Enter any combination of the following characters to decode without spaces: "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&''()*+,-.{:;<=>?@[}]^_`":')
+                     
+print(decodeAsBin(hatdata2decode))
 
-## test string should 29 hex: 0x125df39774e34b89c74e7ce5d129d8ca512739080048 equivalent in binary to this output: 010010010111011111001110010111011101001110001101001011100010011100011101001110011111001110010111010001001010011101100011001010010100010010011100111001000010000000000001001000
+## test decode string "HELLOWORLD" should return the binary equivalent of hex: 0x44e55562061b54d
+## test decode string "INVENTEDBYSTEVENHATZAKIS@2018' should return this hex 0x125df39774e34b89c74e7ce5d129d8ca512739080048 as equivalent in binary to this output: 010010010111011111001110010111011101001110001101001011100010011100011101001110011111001110010111010001001010011101100011001010010100010010011100111001000010000000000001001000
 
-
-## Note/CONSIDERATION: Last four punctuation characters "{|}`" have been omitted from the above list, and even though they exists in the encoder python app it never appears in results (perhaps should be added here so a warning/error would trigger if those values ever appear in results or when entered into a decoder.
+## Note/CONSIDERATION: In version 1.01 to resolve a rendering conflict, the Forward slash `/` and Backslash `\` characters have been swapped out and replaced by the closing curly bracket `}` and opening curly bracket `{` on purpose.
 
 
 
