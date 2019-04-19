@@ -21,7 +21,7 @@ Mnemonics (aka recovery phrases) are used in many popular crypto wallet applciat
 
 For example, instead of a user having to backup a string of 128 bits or their private key, they can simply store the encoded mnemonic which represents those bits or a private key. 
 
-> Note: While the word "private key" is usually associated with public/private key-pairs in cryptogrpahy, for the purpose of this Readme.md file, the use of private key refers to the master private key (initial entropy) for a crypto vault (within which accounts and private keys are dervived) which can also be considered a pre-image of the mnemonic.
+> Note: While the word "private key" is usually associated with public/private key-pairs in cryptogrpahy, for the purpose of this Readme.md file, the use of private key refers to the master private key (initial entropy) for a crypto vault (within which accounts and private keys are derived) which can also be considered a pre-image of the mnemonic.
 
 
 |                |12-word mnemonic               |24-word mnemonic             |
