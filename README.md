@@ -193,8 +193,6 @@ Python 3 or higher
 - Converted binary string to hex (can be used as starting point to encode to "helloworld": `0x44e55562061b54d`
 
 
-Second Test: Decoder should be able to take a single backslash `\` and return index value 59, as well as multiple ones '`\\\\\`' and not be affected by any formatting/rendering issues of the app or interface (i.e. python or javascript/html).
-
 
 ## Resources: 
 
