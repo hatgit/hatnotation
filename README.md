@@ -138,7 +138,7 @@ Using the binascii libary in python which contains the string library, we source
 43 | "101011", | "(",
 44 | "101100", | ")",
 45 | "101101", | "*",
-46 | "101110", | "+",
+46 | "101110", | '+',
 47 | "101111", | ",",
 48 | "110000", | "-",
 49 | "110001", | ".",
