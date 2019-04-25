@@ -65,7 +65,7 @@ def base64en(address_hex):   # important never to rename base64en to "base64" wh
 "(",
 ")",
 "*",
-"+",
+'+',
 ",",
 "-",
 ".",
