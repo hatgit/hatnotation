@@ -101,7 +101,7 @@ def decodeAsHex(string):
 
     return hex(int(decodeAsBin(string), 2))
 
-hatdata2decode=input('Enter any combination of the following characters to decode without spaces: "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&''()*+,-.{:;<=>?@[}]^_`":')
+hatdata2decode=input('Enter any combination of the following characters to decode without spaces: 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ!"'"#$%&'"'()*+,-.{:;<=>?@[}]^_`:')
                      
 print(decodeAsBin(hatdata2decode))
 
