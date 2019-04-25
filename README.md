@@ -171,6 +171,13 @@ In Python version 3.7 using the strings library, the following steps can be take
 
 (and the following four remain excluded/reserved ~~```"\/|~"```~~).
 
+
+The following Hex string can be fed to the encoder to print all characters in order except for the first which is "0" (zero) and gets omitted: 0x108310518720928b30d38f41149351559761969b71d79f8218a39259a7a29aabb2dbafc31ef3d35db7e39eb2f3dfbf
+
+The loss of leading zeroes has been discussed in the following issue and is common across notation systems when converting from padded binary data: https://github.com/hatgit/hatnotation/issues/6
+
+** There can be some formatting issues in Python which affect how data is printed as noted in this committ: https://github.com/hatgit/hatnotation/commit/66727918cef8a5bdfad21051d52b9c1e483c7fbc
+
 ## Requirements
 
 Python 3 or higher
