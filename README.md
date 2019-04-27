@@ -194,21 +194,23 @@ Python 3 or higher
 
 - Converted binary string to hex (can be used as starting point to encode to "HELLOWORLD": `0x44e55562061b54d`
 
-The following Hex string can be fed to the encoder to print all characters in their linear order except for the first which is "0" (zero) and gets omitted: 0x108310518720928b30d38f41149351559761969b71d79f8218a39259a7a29aabb2dbafc31ef3d35db7e39eb2f3dfbf
+>The following Hex string can be fed to the encoder to print all characters in their linear order except for the first which is "0" (zero) and gets omitted: 
 
-The easiest of this example can be seen using the Hatnotation library of 64 characters as the input: 
+0x108310518720928b30d38f41149351559761969b71d79f8218a39259a7a29aabb2dbafc31ef3d35db7e39eb2f3dfbf
+
+The easiest of this example can be seen using the Hatnotation library of 64 characters as the input to the decoder: 
 
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&'()*+,-.{:;<=>?@[}]^_`
 
-`The library in binary format as a continous string: 
+The library in binary format as a continous string: 
 
 000000000001000010000011000100000101000110000111001000001001001010001011001100001101001110001111010000010001010010010011010100010101010110010111011000011001011010011011011100011101011110011111100000100001100010100011100100100101100110100111101000101001101010101011101100101110101111110000110001110010110011110100110101110110110111111000111001111010111011111100111101111110111111
 
-(which in hex is: 0x108310518720928b30d38f41149351559761969b71d79f8218a39259a7a29aabb2dbafc31ef3d35db7e39eb2f3dfbf)
-which when encoded back to hatnotation loses the leading zero (or first 6 zeroes of the above binary string) resulting in it missing from the start of the resulting encoded characters: "123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&'()*+,-.}:;<=>?@[{]^_`"
+The above 384-bit binary string (based on 64*6 bits) in hex is: 0x108310518720928b30d38f41149351559761969b71d79f8218a39259a7a29aabb2dbafc31ef3d35db7e39eb2f3dfbf
 
+When the above hex string is encoded back to hatnotation it loses the leading zero (or first 6 zeroes of the above binary string) resulting in it missing from the start of the resulting encoded characters: "123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&'()*+,-.}:;<=>?@[{]^_`"
 
-The loss of leading zeroes has been discussed in the following issue and is common across notation systems when converting from padded binary data: https://github.com/hatgit/hatnotation/issues/6
+The loss of leading zeroes has been discussed in the following issue and is common across other popular notation systems when converting from left-padded binary data: https://github.com/hatgit/hatnotation/issues/6
 
 ** There can be some formatting issues in Python which affect how data is printed as noted in this committ: https://github.com/hatgit/hatnotation/commit/66727918cef8a5bdfad21051d52b9c1e483c7fbc
 
