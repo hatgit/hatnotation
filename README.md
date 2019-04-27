@@ -184,7 +184,7 @@ Python 3 or higher
 
 > Example Test strings (note: these are not ASCII notations): 
 
-- Decode Target: `HELLOWORLD
+- Decode Target: `HELLOWORLD`
 
 - Each letter decodes to respective 6-bit group: `"010001","001110","010101","010101","011000"," ", "100000","011000","011011","010101","001101",
 
