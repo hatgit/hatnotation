@@ -13,7 +13,7 @@ An encoding/decoding method that allows users to compress their human-readable d
 
 ## Warning: 
 
-This software is still in its experimental phase and should not be relied upon for production.  
+This software is still in its experimental phase (including debugging, redesign and error-checking/testing) and should not be relied upon for production.  
 
 ## Background on Mnemonics (private keys) and Human vs Machine-readable code
 
@@ -53,7 +53,7 @@ In terms of actual pre-image resistance, the initial entropy should be generated
 
 ## Important
 
-The Hatnotation system is *not intended to be an alternative to human-readable mnemonics*, but rather a complement and simply another representation of the machine-readable code, with the benefit of a reduction in the number of characters needed to notate and backup/store the data, using common and special characters from a library of 64 total possible characters (in range of 2^6). 
+The Hatnotation system is *not intended to be an alternative to human-readable mnemonics*, but rather a complement and simply another representation of the machine-readable code, with the benefit of a reduction in the number of characters needed to notate and backup/store the data, using common and special characters from a library of 64 total possible characters (in the zero-indexed range of 2^6-1). 
 
 
 
