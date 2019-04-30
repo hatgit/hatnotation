@@ -99,6 +99,6 @@ def base64en(address_hex):   # important never to rename base64en to "base64" wh
     #for one in range(ones):
      #   b64_string = '1' + b64_string
     return b64_string
-hexer=int(input('enter hex with pad'),16)
+hexer=int(input('enter binary string with '0b' pad'),2)
 print(base64en(hexer))
 print("The above is this many char's long: ",len(str((base64en(hexer)))))
