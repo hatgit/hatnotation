@@ -13,7 +13,7 @@ An encoding/decoding method that allows users to compress their human-readable d
 
 ## Warning: 
 
-This software is still in its experimental phase (including debugging, redesign and error-checking/testing) and should not be relied upon for production.  
+This software is still in its experimental phase (including debugging, redesign and error-checking/testing) and should not be relied upon for production. For example, as of April 30 before the conclusion of the Ethereal Hackathon our Javascript versions of the Decoder were still being debugged. And while our Python versions were fully functional and working correctly, when encoding a binary string that contains leading padded-zeroes (i.e. empty placeholder values not part of an actual   number but simply indicating a potential range of numbers that the acutal number is within) those zeroes are not mapped and therefore when decoding Hatnotated data that originally contained such numbers, they will be lost (i.e. were lost on encoding and thus are not there when decoding either). There is a workaround for this that is being considered, but the onus is on the user to know such data when initially encoding any aribtrary string. For the sake of mnemonics used in this example the solution is easy, but other cases could be more complex. See this issue for more on leading zeroes: https://github.com/hatgit/hatnotation/issues/6
 
 ## Background on Mnemonics (private keys) and Human vs Machine-readable code
 
@@ -49,6 +49,8 @@ In terms of actual pre-image resistance, the initial entropy should be generated
 
 - >Hatnotation format:
  > `9$B_,4-C$T(W_O;-)B'0N`
+ 
+ NOTE: The above binary string contains two leading zeroes (from a total of four) which are lost during encoding. 
 
 
 ## Important
@@ -170,8 +172,6 @@ In Python version 3.7 using the strings library, the following steps can be take
 - The list of valid Hatnotation library characters are thus as follows: 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&'()*+,-.{:;<=>?@[}]^_`
 
 - And the following four remain excluded/reserved ~~```"\/|~"```~~).
-
-
 
 ## Requirements
 
