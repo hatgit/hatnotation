@@ -13,7 +13,7 @@ An encoding/decoding method that allows users to compress their human-readable d
 
 ## Warning: 
 
-This software is still in its experimental phase (including debugging, redesign and error-checking/testing) and should not be relied upon for production. For example, as of April 30 before the conclusion of the Ethereal Hackathon our Javascript versions of the Decoder were still being debugged. And while our Python versions were fully functional and working correctly, when encoding a binary string that contains leading padded-zeroes (i.e. empty placeholder values not part of an actual   number but simply indicating a potential range of numbers that the acutal number is within) those zeroes are not mapped and therefore when decoding Hatnotated data that originally contained such numbers, they will be lost (i.e. were lost on encoding and thus are not there when decoding either). There is a workaround for this that is being considered, but the onus is on the user to know such data when initially encoding any aribtrary string. For the sake of mnemonics used in this example the solution is easy, but other cases could be more complex. See this issue for more on leading zeroes: https://github.com/hatgit/hatnotation/issues/6
+This software is still in its experimental phase (including debugging, redesign and error-checking/testing) and should not be relied upon for production. For example, as of April 30 before the conclusion of the Ethereal Hackathon our Javascript versions of the Decoder were still being debugged. 
 
 ## Background on Mnemonics (private keys) and Human vs Machine-readable code
 
@@ -38,19 +38,19 @@ In terms of actual pre-image resistance, the initial entropy should be generated
 
 ### Example of various notation methods for a given binary (base 2) string: 
 
-- Binary (base-2) format: 
->`00001001100111001011111110101111000100110000001100100111011101101011100000111110011000110100110000101100001011101010000000010111`
-- Hexidecimal(base-16) format: 
-> `99cbfaf13032776b83e634c2c2ea017`
-- Decimal (base-10) integer format: 
->`12776938083042441757844264502598475799`
-- Mnemonic format (BIP39): 
->`another tourist type champion crash robust thought small equip gesture pool cool`  (note: this mnemonic conveys 132 bits as the extra 4-bit checksum is deterministic based on the initial 128 bits).</ul></li>
+- 132-bit Binary (base-2) format with leading 0b): 
+>`0b000010011001110010111111101011110001001100000011001001110111011010111000001111100110001101001100001011000010111010100000000101111110`
+- 32-character Hexidecimal(base-16) format (with leading 0x): 
+> `0x99cbfaf13032776b83e634c2c2ea017e`
+- 39-decimal (base-10) integer format: 
+>`204431009328679068125508232041575612798`
+- 12-word Mnemonic format (BIP39): 
+>`another tourist type champion crash robust thought small equip gesture pool cool`  (note: this mnemonic conveys 132 bits as the extra 4-bit checksum '1110' from the above binary string is deterministic based on the initial 128 bits).</ul></li>
 
 - >Hatnotation format:
- > `9$B_,4-C$T(W_O;-)B'0N`
+ > 2P{`(.C39>Q?F#DCB2[W5_
  
- NOTE: The above binary string contains two leading zeroes (from a total of four) which are lost during encoding. 
+  
 
 
 ## Important
