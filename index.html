@@ -377,6 +377,7 @@ b){var c={},d;for(d=0;d<b.length;d++)void 0!==a[b[d]]&&(c[b[d]]=a[b[d]]);return 
        //console.log(hex2)
         var words=pickWords(entropyWithChecksum) 
         console.log(words)
+        document.getElementById('result').innerHTML=words
     }
     function pickWords(entropyHash) {
         var result = [];
@@ -2608,6 +2609,7 @@ b){var c={},d;for(d=0;d<b.length;d++)void 0!==a[b[d]]&&(c[b[d]]=a[b[d]]);return 
      <input id="base64entropy">
      <button onclick="Decrypt()"> Get Seed Words</button>
      <br>
+     <p id='result'></p>
      <br>
   </body>
 </html>
