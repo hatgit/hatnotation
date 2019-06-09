@@ -208,7 +208,7 @@ The library in binary format as a continous string:
 
 The above 384-bit binary string (based on 64*6 bits) in hex is: 0x108310518720928b30d38f41149351559761969b71d79f8218a39259a7a29aabb2dbafc31ef3d35db7e39eb2f3dfbf
 
-When the above hex string is encoded back to hatnotation it loses the leading zero (or first 6 zeroes of the above binary string) resulting in it missing from the start of the resulting encoded characters: "123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&'()*+,-.}:;<=>?@[{]^_`"
+When the above hex string is encoded back to hatnotation it loses the leading zero (or first 6 zeroes of the above binary string) resulting in it missing from the start of the resulting encoded characters: "123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&'()*+,-.{:;<=>?@[}]^_`"
 
 The loss of leading zeroes has been discussed in the following issue and is common across other popular notation systems when converting from left-padded binary data: https://github.com/hatgit/hatnotation/issues/6
 
