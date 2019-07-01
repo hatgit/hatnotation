@@ -40,8 +40,8 @@ In terms of actual pre-image resistance, the initial entropy should be generated
 
 - 132-bit Binary (base-2) format with leading 0b): 
 >`0b000010011001110010111111101011110001001100000011001001110111011010111000001111100110001101001100001011000010111010100000000101111110`
-- 32-character Hexidecimal(base-16) format (with leading 0x): 
-> `0x99cbfaf13032776b83e634c2c2ea017e`
+- 33-character Hexidecimal(base-16) format (with leading 0x): 
+> `0x099cbfaf13032776b83e634c2c2ea017e`
 - 39-decimal (base-10) integer format: 
 >`204431009328679068125508232041575612798`
 - 12-word Mnemonic format (BIP39): 
