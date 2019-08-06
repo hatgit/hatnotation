@@ -235,7 +235,7 @@ This approach is necessary as appending the zeroes instead at the right end woul
 - potentially propose a request for comments (RFC) for consideration as a standard.
 - add error message for invalid characters (i.e. lowercase and reserved characters `\|/~`
 
-# About Hatnotation-Password-Generator-Python.py
+# About Hatnotation-Password-Generator.py
 
 Author: Steven Hatzakis @ 2019
 
