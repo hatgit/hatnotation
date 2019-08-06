@@ -235,3 +235,10 @@ This approach is necessary as appending the zeroes instead at the right end woul
 - potentially propose a request for comments (RFC) for consideration as a standard.
 - add error message for invalid characters (i.e. lowercase and reserved characters `\|/~`
 
+# About Hatnotation-Password-Generator-Python.py
+
+Author: Steven Hatzakis @ 2019
+
+A cryptographcially-secure password generator that uses Python's built-in "secrets" module and that is compatible with the Hatnotation library (i.e. Generates passwords that only use the 64 Hatnotation characters).
+
+
