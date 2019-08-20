@@ -40,15 +40,24 @@ In terms of actual pre-image resistance, the initial entropy should be generated
 
 - 132-bit Binary (base-2) format with leading 0b): 
 >`0b000010011001110010111111101011110001001100000011001001110111011010111000001111100110001101001100001011000010111010100000000101111110`
+
 - 33-character Hexidecimal(base-16) format (with leading 0x): 
 > `0x099cbfaf13032776b83e634c2c2ea017e`
+
+- 16-bytes totalling 35 characters excluding backslahes and b-pad: 
+> b'\x99\xcb\xfa\xf102wk\x83\xe64\xc2\xc2\xea\x01~'
+
+- 24-character Base64 excluding b-pad:
+>`b'mcv68TAyd2uD5jTCwuoBfg=='`
+
 - 39-decimal (base-10) integer format: 
 >`204431009328679068125508232041575612798`
+
 - 12-word Mnemonic format (BIP39): 
 >`another tourist type champion crash robust thought small equip gesture pool cool`  (note: this mnemonic conveys 132 bits as the extra 4-bit checksum '1110' from the above binary string is deterministic based on the initial 128 bits).</ul></li>
 
-- >Hatnotation format:
- > 2P{`(.C39>Q?F#DCB2[W5_
+- 22-character Hatnotation format:
+> 2P{`(.C39>Q?F#DCB2[W5_
  
   
 
