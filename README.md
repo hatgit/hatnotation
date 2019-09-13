@@ -248,6 +248,6 @@ This approach is necessary as appending the zeroes instead at the right end woul
 
 Author: Steven Hatzakis @ 2019
 
-A cryptographcially-secure password generator that uses Python's built-in "secrets" module and that is compatible with the Hatnotation library (i.e. Generates passwords that only use the 64 Hatnotation characters).
+A cryptographcially-secure (password generator)[https://github.com/hatgit/hatnotation/blob/master/Hatnotation-Password-Generator.py] that uses Python's built-in "secrets" module and that is compatible with the Hatnotation library (i.e. Generates passwords that only use the 64 Hatnotation characters).
 
 
