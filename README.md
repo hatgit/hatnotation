@@ -44,10 +44,10 @@ In terms of actual pre-image resistance, the initial entropy should be generated
 - 33-character Hexidecimal(base-16) format (with leading 0x): 
 > `0x099cbfaf13032776b83e634c2c2ea017e`
 
-- 16-bytes totalling 35 characters excluding backslahes and b-pad: 
+- 16-bytes totalling 35 characters excluding backslahes: 
 > b'\x99\xcb\xfa\xf102wk\x83\xe64\xc2\xc2\xea\x01~'
 
-- 24-character Base64 excluding b-pad:
+- 24-character Base64:
 >`b'mcv68TAyd2uD5jTCwuoBfg=='`
 
 - 39-decimal (base-10) integer format: 
