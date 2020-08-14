@@ -3,9 +3,9 @@ import secrets
 import sys
 import math
 
-Author: Steven Hatzakis @ 2019
+#Author: Steven Hatzakis @ 2019
 
-A cryptographically-secure password generator that uses Python's built-in "secrets" module and that is compatible with the Hatnotation library.
+#A cryptographically-secure password generator that uses Python's built-in "secrets" module and that is compatible with the Hatnotation library.
 
 alphabet = ["0",
 "1",
